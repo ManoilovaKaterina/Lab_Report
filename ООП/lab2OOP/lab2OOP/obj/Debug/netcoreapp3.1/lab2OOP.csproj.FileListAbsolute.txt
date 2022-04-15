@@ -1,0 +1,14 @@
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\bin\Debug\netcoreapp3.1\lab2OOP.exe
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\bin\Debug\netcoreapp3.1\lab2OOP.deps.json
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\bin\Debug\netcoreapp3.1\lab2OOP.runtimeconfig.json
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\bin\Debug\netcoreapp3.1\lab2OOP.runtimeconfig.dev.json
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\bin\Debug\netcoreapp3.1\lab2OOP.dll
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\bin\Debug\netcoreapp3.1\lab2OOP.pdb
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\obj\Debug\netcoreapp3.1\lab2OOP.csproj.AssemblyReference.cache
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\obj\Debug\netcoreapp3.1\lab2OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\obj\Debug\netcoreapp3.1\lab2OOP.AssemblyInfoInputs.cache
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\obj\Debug\netcoreapp3.1\lab2OOP.AssemblyInfo.cs
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\obj\Debug\netcoreapp3.1\lab2OOP.csproj.CoreCompileInputs.cache
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\obj\Debug\netcoreapp3.1\lab2OOP.dll
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\obj\Debug\netcoreapp3.1\lab2OOP.pdb
+C:\Users\undor\source\repos\lab2OOP\lab2OOP\obj\Debug\netcoreapp3.1\lab2OOP.genruntimeconfig.cache
