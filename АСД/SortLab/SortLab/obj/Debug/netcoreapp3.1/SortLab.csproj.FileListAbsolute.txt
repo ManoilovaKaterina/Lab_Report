@@ -1,0 +1,14 @@
+C:\Users\undor\source\repos\SortLab\SortLab\bin\Debug\netcoreapp3.1\SortLab.exe
+C:\Users\undor\source\repos\SortLab\SortLab\bin\Debug\netcoreapp3.1\SortLab.deps.json
+C:\Users\undor\source\repos\SortLab\SortLab\bin\Debug\netcoreapp3.1\SortLab.runtimeconfig.json
+C:\Users\undor\source\repos\SortLab\SortLab\bin\Debug\netcoreapp3.1\SortLab.runtimeconfig.dev.json
+C:\Users\undor\source\repos\SortLab\SortLab\bin\Debug\netcoreapp3.1\SortLab.dll
+C:\Users\undor\source\repos\SortLab\SortLab\bin\Debug\netcoreapp3.1\SortLab.pdb
+C:\Users\undor\source\repos\SortLab\SortLab\obj\Debug\netcoreapp3.1\SortLab.csproj.AssemblyReference.cache
+C:\Users\undor\source\repos\SortLab\SortLab\obj\Debug\netcoreapp3.1\SortLab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\undor\source\repos\SortLab\SortLab\obj\Debug\netcoreapp3.1\SortLab.AssemblyInfoInputs.cache
+C:\Users\undor\source\repos\SortLab\SortLab\obj\Debug\netcoreapp3.1\SortLab.AssemblyInfo.cs
+C:\Users\undor\source\repos\SortLab\SortLab\obj\Debug\netcoreapp3.1\SortLab.csproj.CoreCompileInputs.cache
+C:\Users\undor\source\repos\SortLab\SortLab\obj\Debug\netcoreapp3.1\SortLab.dll
+C:\Users\undor\source\repos\SortLab\SortLab\obj\Debug\netcoreapp3.1\SortLab.pdb
+C:\Users\undor\source\repos\SortLab\SortLab\obj\Debug\netcoreapp3.1\SortLab.genruntimeconfig.cache
