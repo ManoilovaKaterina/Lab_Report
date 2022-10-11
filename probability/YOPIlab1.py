@@ -74,7 +74,16 @@ def dispersion(arr, freqarr):
     disp = sum1/len(arr)
     return disp
 
-def figure():
+def Interval(arr):
+    intSize = int(round(max(arr)*0.03))
+    intarr = []
+    tempint = 0
+    while tempint <= max(arr):
+        intarr.append(tempint)
+        tempint += intSize
+    return intarr
+
+def bardiagram():
     fig = plt.figure()
     ax = fig.add_axes([0.1,0.1,0.8,0.8])
     filmcount = []
@@ -84,6 +93,14 @@ def figure():
     for el in freqArr.keys():
         filmcount.append(el)
     ax.bar(filmcount, freq)
+
+def histogram(arr):
+    interval = Interval(arr)
+    print(interval)
+    plt.hist(sorted(arr), interval, facecolor='r', alpha=0.7, edgecolor='k', linewidth=1)
+    plt.title("Частота просмотрів фільмів")
+    plt.xlabel("К-ть просмотрів фільмів")
+    plt.ylabel("Частота")
 
 def writeOutput(Lines, fileout):
     fileout.write("Елемент | Частота | Відносна частота\n")
@@ -119,7 +136,10 @@ def scenario(file, fileout):
 
     writeOutput(Lines, fileout)
     fileout.close
-    figure()
+    if file==file10:
+        bardiagram()
+    else:
+        histogram(Lines)
     print("--- час виконання: %s секунд ---" % (time.time() - start_time))
     plt.show()
 
