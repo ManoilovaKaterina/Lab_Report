@@ -93,6 +93,7 @@ def writeOutput(Lines, fileout):
     fileout.write("\nКількість елементів: " + str(len(Lines)))
     fileout.write("\nСереднє абсолютне відхилення = "+ str(MAD(Lines, freqArr)))
     fileout.write("\nДисперсія = " + str(dispersion(Lines, freqArr)))
+    fileout.write("\nСереднє квадратичне (стандартне) відхилення = " + str(math.sqrt(dispersion(Lines, freqArr))))
 
 def scenario(file, fileout):
     start_time = time.time()
@@ -114,7 +115,8 @@ def scenario(file, fileout):
     findMod(freqArr)
     print("Середнє абсолютне відхилення = ", MAD(Lines, freqArr))
     print("Дисперсія = ", dispersion(Lines, freqArr))
-    
+    print("Середнє квадратичне (стандартне) відхилення = ", math.sqrt(dispersion(Lines, freqArr)))
+
     writeOutput(Lines, fileout)
     fileout.close
     figure()
