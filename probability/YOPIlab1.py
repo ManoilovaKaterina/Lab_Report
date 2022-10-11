@@ -39,11 +39,7 @@ def countCuFr(freqarr):
     fr = 0
     for el in freqarr.keys():
         fr += freqarr[el][0]
-        if i==0:
-            freqarr[el][1] = freqarr[el][0]
-        else:
-            freqarr[el][1] = fr
-        i += 1
+        freqarr[el][1] = fr
 
 def findMod(freqarr):
     vallist = []
