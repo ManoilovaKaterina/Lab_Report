@@ -74,15 +74,6 @@ def dispersion(arr, freqarr):
     disp = sum1/len(arr)
     return disp
 
-def Interval(arr):
-    intSize = int(round(max(arr)*0.03))
-    intarr = []
-    tempint = 0
-    while tempint <= max(arr):
-        intarr.append(tempint)
-        tempint += intSize
-    return intarr
-
 def bardiagram():
     fig = plt.figure()
     ax = fig.add_axes([0.1,0.1,0.8,0.8])
@@ -94,9 +85,18 @@ def bardiagram():
         filmcount.append(el)
     ax.bar(filmcount, freq)
 
+def Interval(arr):
+    intSize = int(round(max(arr)*0.03))
+    intarr = []
+    tempint = 0
+    while tempint <= max(arr):
+        intarr.append(tempint)
+        tempint += intSize
+    return intarr
+
 def histogram(arr):
     interval = Interval(arr)
-    print(interval)
+    print("Інтервали значень: ", interval)
     plt.hist(sorted(arr), interval, facecolor='r', alpha=0.7, edgecolor='k', linewidth=1)
     plt.title("Частота просмотрів фільмів")
     plt.xlabel("К-ть просмотрів фільмів")
