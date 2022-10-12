@@ -35,7 +35,6 @@ def countFr(arr, freqarr):
             freqarr[str(el)] = [1, 0]
 
 def countCuFr(freqarr):
-    i = 0
     fr = 0
     for el in freqarr.keys():
         fr += freqarr[el][0]
@@ -139,8 +138,9 @@ def scenario(file, fileout):
     fileout.close
     if file==file10:
         bardiagram()
-    else:
-        histogram(Lines)
+        print("--- час виконання: %s секунд ---" % (time.time() - start_time))
+        plt.show()
+    histogram(Lines)
     print("--- час виконання: %s секунд ---" % (time.time() - start_time))
     plt.show()
 
