@@ -86,7 +86,7 @@ def bardiagram():
     ax.bar(filmcount, freq)
 
 def Interval(arr):
-    intSize = int(round(max(arr)*0.03))
+    intSize = int(round(max(arr)*0.04))
     intarr = []
     tempint = 0
     while tempint <= max(arr):
@@ -103,7 +103,7 @@ def histogram(arr):
     plt.ylabel("Частота")
 
 def writeOutput(Lines, fileout):
-    fileout.write("Елемент | Частота | Відносна частота\n")
+    fileout.write("Елемент | Частота | Сукупна частота\n")
     for el in freqArr.keys():
         tempstring = str(el) + "\t| " + str(freqArr[el][0]) + "\t  |\t" + str(freqArr[el][1]) + "\n"
         fileout.write(tempstring)
@@ -119,14 +119,15 @@ def scenario(file, fileout):
     Lines = [int(x) for x in LineString]
     Lines.remove(Lines[0])
 
-    out(Lines)
+    if file!=file1000:
+        out(Lines)
     print("\nКількість елементів: ", len(Lines))
     findMax(Lines)
     print("Медіана: ", median(Lines))
     countFr(Lines, freqArr)
     countCuFr(freqArr)
     print("Таблиця частот: ")
-    print("Елемент | Частота | Відносна частота")
+    print("Елемент | Частота | Сукупна частота")
     for el in freqArr.keys():
         print(el, "\t| ", freqArr[el][0], "\t  |\t", freqArr[el][1])
     findMod(freqArr)
