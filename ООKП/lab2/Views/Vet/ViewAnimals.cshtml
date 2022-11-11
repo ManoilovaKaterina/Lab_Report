@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title> ViewAnimals </title>
+</head>
+<body>
+    <div>
+        <h3>Пацієнти</h3>
+        <table>
+            <tr class="header">
+                <td> <p> Ім'я </p> </td>
+                <td> <p> Вид </p> </td>
+                <td> <p> Порода </p> </td>
+                <td> <p> Вік </p> </td>
+                <td> <p> Стать </p> </td>
+                <td> <p> Власник </p> </td>
+                <td>
+                </td>
+            </tr>
+            @foreach (var b in ViewBag.Animals)
+            {
+                <tr>
+                    <td> <p> @b.Name </p> </td>
+                    <td> <p> @b.Kind </p> </td>
+                    <td> <p> @b.Breed </p> </td>
+                    <td> <p> @b.Age </p> </td>
+                    <td> <p> @b.Gen </p> </td>
+                    <td> <p> @b.Owner </p> </td>
+                    <td> <p> <a href="/Vet/AddDiagnosis?PatientId=@b.AnimalId">Додати діагноз</a></p> </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

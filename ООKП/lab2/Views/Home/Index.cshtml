@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title> Vetclinic </title>
+</head>
+<body>
+    <div>
+        <h3>Ветклініка</h3>
+        <table>
+            <tr class="header">
+                <td> <p> <a href="/Home/ViewService">Наші послуги:</a> </p> </td>
+            </tr>
+            @foreach (var b in ViewBag.Services)
+            {
+                <tr>
+                    <td> <p> @b.Name </p> </td>
+                </tr>
+            }
+        </table>
+        <table>
+            <tr class="header">
+                <td> <p> <a href="/Home/OurVets">Наші лікарі:</a> </p> </td>
+            </tr>
+            @foreach (var b in ViewBag.Vets)
+            {
+                <tr>
+                    <td> <p> @b.Name </p> </td>
+                    <td> <p> @b.Specialization </p> </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

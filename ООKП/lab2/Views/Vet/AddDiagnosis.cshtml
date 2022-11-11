@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>AddDiagnosis</title>
+</head>
+<body>
+    <div>
+        <h3>Додавання діагнозу </h3>
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.Patient.AnimalId" name="AnId" />
+            <table>
+                <tr>
+                    <td> <p> Введіть діагноз пацієнта </p> </td>
+                    <td> <input type="text" name="Information" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="Підтвердити" /></td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

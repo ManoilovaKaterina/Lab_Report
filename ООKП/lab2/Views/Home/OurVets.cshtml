@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title> OurVets </title>
+</head>
+<body>
+    <div>
+        <h3>Ветеринари</h3>
+        <table>
+            <tr class="header">
+                <td> <p> Ім'я </p> </td>
+                <td> <p> Спеціалізація </p> </td>
+                <td>
+                </td>
+            </tr>
+            @foreach (var b in ViewBag.Vets)
+            {
+                <tr>
+                    <td> <p> @b.Name </p> </td>
+                    <td> <p> @b.Specialization </p> </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
