@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -73,13 +73,13 @@ namespace asd1
             return T;
         }
 
-        static float BKresult(float[,] T, int[] values, int knapCap)
+        static float BKresult(float[,] T, float[] values, int knapCap)
         {
             return T[values.Length, knapCap];
         }
 
         // розбиття неповних предметів
-        static float[,] PartialKnapsack(int knapCap, int[] weights, int[] values, bool[] part)
+        static float PartialKnapsack(int knapCap, int[] weights, int[] values, bool[] part)
         {
             List<float> temp = new List<float>();
             List<int> tempW = new List<int>();
@@ -103,7 +103,7 @@ namespace asd1
 
             float[] partial = temp.ToArray();
             int[] partialW = tempW.ToArray();
-            return BasicKnapsack(knapCap, partialW, partial);
+            return BKresult(BasicKnapsack(knapCap, partialW, partial), partial, knapCap);
         }
 
         // необмежена к-ть предметів
@@ -182,11 +182,10 @@ namespace asd1
 
                         int[,] BK = BasicKnapsack(w, wt, val);
                         int[] IK = InfiniteKnapsack(w, wt, val);
-                        float[,] PK = PartialKnapsack(w, wt, val, part);
                         Console.WriteLine("\n\nМаксимальні значення:\nСтандартна задача: " + BKresult(BK, val, w));
                         printknapSack(w, wt, val, BK);
                         Console.WriteLine("\nНеобмежена к-ть предметів: " + IKresult(IK, w));
-                        Console.WriteLine("Предмети можна брати частично: " + BKresult(PK, val, w));
+                        Console.WriteLine("Предмети можна брати частично: " + PartialKnapsack(w, wt, val, part));
                     }
                     catch
                     {
@@ -247,11 +246,10 @@ namespace asd1
 
                         int[,] BK = BasicKnapsack(w, wt, val);
                         int[] IK = InfiniteKnapsack(w, wt, val);
-                        float[,] PK = PartialKnapsack(w, wt, val, part);
                         Console.WriteLine("\n\nМаксимальні значення:\nСтандартна задача: " + BKresult(BK, val, w));
                         printknapSack(w, wt, val, BK);
                         Console.WriteLine("\nНеобмежена к-ть предметів: " + IKresult(IK, w));
-                        Console.WriteLine("Предмети можна брати частично: " + BKresult(PK, val, w));
+                        Console.WriteLine("Предмети можна брати частично: " + PartialKnapsack(w, wt, val, part));
                     }
                     catch
                     {
