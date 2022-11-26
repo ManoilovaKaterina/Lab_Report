@@ -1,0 +1,14 @@
+C:\Users\undor\source\repos\huffman\huffman\bin\Debug\netcoreapp3.1\huffman.exe
+C:\Users\undor\source\repos\huffman\huffman\bin\Debug\netcoreapp3.1\huffman.deps.json
+C:\Users\undor\source\repos\huffman\huffman\bin\Debug\netcoreapp3.1\huffman.runtimeconfig.json
+C:\Users\undor\source\repos\huffman\huffman\bin\Debug\netcoreapp3.1\huffman.runtimeconfig.dev.json
+C:\Users\undor\source\repos\huffman\huffman\bin\Debug\netcoreapp3.1\huffman.dll
+C:\Users\undor\source\repos\huffman\huffman\bin\Debug\netcoreapp3.1\huffman.pdb
+C:\Users\undor\source\repos\huffman\huffman\obj\Debug\netcoreapp3.1\huffman.csproj.AssemblyReference.cache
+C:\Users\undor\source\repos\huffman\huffman\obj\Debug\netcoreapp3.1\huffman.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\undor\source\repos\huffman\huffman\obj\Debug\netcoreapp3.1\huffman.AssemblyInfoInputs.cache
+C:\Users\undor\source\repos\huffman\huffman\obj\Debug\netcoreapp3.1\huffman.AssemblyInfo.cs
+C:\Users\undor\source\repos\huffman\huffman\obj\Debug\netcoreapp3.1\huffman.csproj.CoreCompileInputs.cache
+C:\Users\undor\source\repos\huffman\huffman\obj\Debug\netcoreapp3.1\huffman.dll
+C:\Users\undor\source\repos\huffman\huffman\obj\Debug\netcoreapp3.1\huffman.pdb
+C:\Users\undor\source\repos\huffman\huffman\obj\Debug\netcoreapp3.1\huffman.genruntimeconfig.cache
