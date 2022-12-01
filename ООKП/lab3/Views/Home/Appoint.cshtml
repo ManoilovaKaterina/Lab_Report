@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>Appoint</title>
+</head>
+<body>
+    <div>
+        <h3>Форма оформлення прийому </h3>
+        <form method="post" action="">
+            <table>
+                <tr>
+                    <td> <p> Введіть своє ім'я </p> </td>
+                    <td> <input type="text" name="ClName" /></td>
+                </tr>
+                <tr>
+                    <td> <p> Введіть ім'я тварини </p> </td>
+                    <td><input type="text" name="AnName" /></td>
+                </tr>
+                <tr>
+                    <td> <p> Оберіть тип послуги </p> </td>
+                    <td><input type="text" name="ServName" /></td>
+                </tr>
+                <tr>
+                    <td> <p> Оберіть лікаря </p> </td>
+                    <td><input type="text" name="VetName" /></td>
+                </tr>
+                <tr>
+                    <td> <p> Оберіть час </p> </td>
+                    <td><input type="text" name="ATime" /></td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="Оформити запис" /></td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
