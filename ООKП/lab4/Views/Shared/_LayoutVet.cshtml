@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h5>
+        <img src="https://lh3.googleusercontent.com/uSt528jnLOMa_NXvCSlmjOBHv0pL3BVqId3R3sbfnBYum1Q3zH5eMy1Vt54cUg1hgFsDMIC2sldAHvruwZ0fGRpSYTN0oLpHeSWgaEr1R917_Ad_xANX9ZeKy_-cH_7nLJnHVO3TVQ=w2400" alt="logo" style="width:6%; vertical-align:middle;">
+        Ветеринарна клініка <a href="/Home/Index">Клієнт</a> <a href="/Vet/VetPage">Ветеринар</a> <a href="/Admin/AdminPage">Адмін</a>
+    </h5>
+    <nav>
+        <ul class="menu">
+            <li><a href="/Vet/ViewAnimals">Перегляд тварин</a></li>
+            <li><a href="/Vet/ViewAppointments">Перегляд прийомів</a></li>
+        </ul>
+    </nav>
+    @RenderBody()
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>Appoint</title>
+</head>
+<body>
+    <h3>Форма оформлення прийому </h3>
+    <div class="mid">
+        <img src="https://lh3.googleusercontent.com/cnaocO03EjXw6r4Gb9r2IYiUrdkNryF_b3IauiR2oWXkjHqiAZ2IUYNhfbq3s_LIS37yrOliWbce4JygC3olZr8gB2gFBCEpFjCYcxxD0ZA3_omlwCT4PUXQQjZx9PtwZ10bHiQ4NQ=w2400" alt="vet" style="width: 500px;">
+        <form method="post" action="">
+            <table>
+                <tr>
+                    <td> <p> Введіть своє ім'я </p> </td>
+                    <td> <input type="text" name="ClName" /></td>
+                </tr>
+                <tr>
+                    <td> <p> Введіть ім'я тварини </p> </td>
+                    <td><input list="ViewBag.Animals" name="AnName"></td>
+                    <td>
+                        <datalist id="ViewBag.Animals">
+                            @foreach (var b in ViewBag.Animals)
+                            {
+                                <option value=@b.AnimalName class="text">@b.AnimalName</option>
+                            }
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <p> Оберіть тип послуги </p> </td>
+                    <td><input list="ViewBag.Services" name="ServName"></td>
+                    <td>
+                        <datalist id="ViewBag.Services">
+                            @foreach (var b in ViewBag.Services)
+                            {
+                                <option value=@b.ServiceName class="text">@b.ServiceName</option>
+                            }
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <p> Оберіть лікаря </p> </td>
+                    <td><input list="ViewBag.Vets" name="VetName"></td>
+                    <td>
+                        <datalist id="ViewBag.Vets">
+                            @foreach (var b in ViewBag.Vets)
+                            {
+                                <option value=@b.VetName class="text">@b.VetName</option>
+                            }
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <p> Оберіть дату </p> </td>
+                    <td><input type="datetime-local" name="Time"></td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="Оформити запис" /></td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

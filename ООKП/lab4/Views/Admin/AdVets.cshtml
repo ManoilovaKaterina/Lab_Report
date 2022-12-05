@@ -1,0 +1,82 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>AdVets</title>
+</head>
+<body>
+    <div>
+        <h3>Ветеринари</h3>
+        <table>
+            <tr>
+                @using (Html.BeginForm("DeleteVet", "Admin", FormMethod.Post))
+                {
+                    <td>
+                        <p> Введіть індекс ветеринара для видалення </p>
+                        <input type="text" name="Id" />
+                        <input type="submit" value="Підтвердити" />
+                    </td>
+                }
+            </tr>
+            <tr>
+                @using (Html.BeginForm("AddVet", "Admin", FormMethod.Post))
+                {
+                    <td>
+                        <p> Введіть ФІО ветеринара </p>
+                        <input type="text" name="VetName" />
+                    </td>
+                    <td>
+                        <p> Введіть спеціалізацію </p>
+                        <input type="text" name="Specialization" />
+                    </td>
+                    <td>
+                        <input type="submit" value="Підтвердити" />
+                    </td>
+                }
+            </tr>
+            <tr>
+                @using (Html.BeginForm("UpdateVet", "Admin", FormMethod.Post))
+                {
+                    <td>
+                        <p> Введіть індекс ветеринара для оновлення </p>
+                        <input type="text" name="Id" />
+                    </td>
+                    <td>
+                        <p> Оновити ФІО ветеринара </p>
+                        <input type="text" name="newName" />
+                    </td>
+                    <td>
+                        <p> Оновити спеціалізацію </p>
+                        <input type="text" name="newSpec" />
+                    </td>
+                    <td>
+                        <input type="submit" value="Підтвердити" />
+                    </td>
+
+                }
+            </tr>
+        </table>
+        <h2>Ветеринари</h2>
+        <table>
+            <tr>
+                <td> <p> Id </p> </td>
+                <td> <p> ФІО </p> </td>
+                <td> <p> Спеціалізація </p> </td>
+            </tr>
+        </table>
+        <table>
+            @foreach (var b in ViewBag.Vets)
+            {
+                <tr>
+                    <td> <p> @b.VetId </p> </td>
+                    <td> <p> @b.VetName </p> </td>
+                    <td> <p> @b.Specialization </p> </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

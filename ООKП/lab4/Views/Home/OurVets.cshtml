@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title> OurVets </title>
+</head>
+<body>
+    <div>
+        <form asp-action="OurVets" method="get">
+            <div class="form-actions no-color">
+                <p>
+                    Спеціалізація:
+                    <input list="specs" name="Filter" value="@ViewData["CurrentFilter"]">
+                    <datalist id="specs">
+                        <option value="Терапевт" class="text">Терапевт</option>
+                        <option value="Хірург" class="text">Хірург</option>
+                        <option value="Офтальмолог" class="text">Офтальмолог</option>
+                        <option value="Ортопед" class="text">Ортопед</option>
+                        <option value="Стоматолог" class="text">Стоматолог</option>
+                        <option value="Онколог" class="text">Онколог</option>
+                    </datalist>
+                    <input type="submit" value="Пошук" class="btn btn-default" />
+                    <a asp-action="OurVets"></a>
+                </p>
+            </div>
+        </form>
+        <h3>Ветеринари</h3>
+        <table>
+            <tr class="header">
+                <td> <p> Ім'я </p> </td>
+                <td> <p> Спеціалізація </p> </td>
+                <td>
+                </td>
+            </tr>
+            @foreach (var b in ViewBag.Vets)
+            {
+                <tr>
+                    <td>
+                        <div class="dropdown">
+                            <p> @b.VetName </p>
+                            <div class="dropdown-content">
+                                <img src="@b.Img" alt="Opht" style="width: 300px; height: 400px; object-fit: cover; object-position: 50% 0;">
+                                <div class="desc">@b.VetName</div>
+                            </div>
+                        </div>
+                    <td> <p> @b.Specialization </p> </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

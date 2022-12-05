@@ -1,0 +1,149 @@
+﻿body {
+    font-size: 15px;
+    font-family: Montserrat;
+    background-color: #e2e2e2;
+    color: #002828;
+    padding-left: 40px;
+}
+
+nav {
+    display: block;
+    width: stretch;
+    height: auto;
+    background-color: #48a997;
+    overflow: auto;
+}
+
+.menu {
+    text-align: center;
+}
+
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu li {
+        display: inline-block;
+        margin-right: 7%;
+        margin-left: 7%;
+    }
+
+    .menu image {
+        float: left;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
+    .menu a:hover {
+        text-decoration: underline;
+        color: whitesmoke;
+    }
+
+a {
+    color: #005151;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+table {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.header {
+    font-weight: bold;
+}
+
+td {
+    padding-right: 10px;
+}
+
+input {
+    width: 150px;
+}
+
+h3 {
+    margin-top: 3%;
+}
+
+h4 {
+    color: #005151;
+}
+
+h5 {
+    color: #008b8b;
+    font-size: 20px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+    h5 a {
+        font-size: 10px;
+        color: gray;
+    }
+
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+    div.scrollmenu div.col {
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #e2e2e2;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.mid {
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, #e2e2e2 0%, #e2e2e2 20%, #8bcab9 20%, #8bcab9 80%, #e2e2e2 80%);
+}
+    .mid img {
+        background-color: #8bcab9;
+    }
+
+    .mid table {
+        border-radius: 5px;
+        background-color: #8bcab9;
+    }
+
+        .mid table td {
+            padding-bottom: 1em;
+        }

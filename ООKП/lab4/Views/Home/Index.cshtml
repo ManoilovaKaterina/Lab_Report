@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title> Vetclinic </title>
+</head>
+<body>
+    <div>
+        <h3><a href="/Home/ViewService">Наші послуги:</a></h3>
+        <div class="row">
+            <div class="column">
+                <img src="https://lh3.googleusercontent.com/YpM2cq93Az4lOE3hor7zWYrJ3FQKUTWptALlDFUAE57-jbpJT6rwJSBxbN5f1GgJCw60pGsxq4TiZRpD-nFE4uISbB7xuwesASgK8PwyKP1jYYSjYQ4MMmM_SkSsWcRB16Qle8IiZA=w2400" alt="therapy" style="width:100%">
+                <h4>Терапія</h4>
+            </div>
+            <div class="column">
+                <img src="https://lh3.googleusercontent.com/TcbCr-TYIWW0Od635CWud1VPOiNmieHGsOovk8h9kAsm5ODPU2wksXq9dvpCyJuwNyXBCziLPX3Wu6GfkCfKgmgBrRcZJSJSttJqpuZSsgPx75lgiCvPg-rYEjCH01UeulO6MGH0Vg=w2400" alt="Surgery" style="width:100%">
+                <h4>Хірургія</h4>
+            </div>
+            <div class="column">
+                <img src="https://lh3.googleusercontent.com/fKwklD1hKXVjIvsLKeEuYg7CbbSfCTP2dgsYYl2cwk_ZP9xVRNr1pbrUfSqJmw1ZE4_ZvcUTx2XutJsaVOTvsH-i8Eyh3zV9UBYzfTtevlU3ZIBwjfSijGjgpyMk9m_GovFUe4Kyiw=w2400" alt="Opht" style="width:100%">
+                <h4>Офтальмологія</h4>
+            </div>
+            <div class="column">
+                <img src="https://lh3.googleusercontent.com/0oI_XXiizaXFHBau2Bz2x6NEKS8QqB6R_4zcg8xcvbxg6Z-_gs0ohaHNugwm3FaMvY_sAIkaFT-f8iLuk_pm2mIp8Pf2Dmf0SxZbTMQ_S_JFF1Ys7r2M5VkmkfxQeaIH1fMNFlJybw=w2400" alt="Dentist" style="width:100%">
+                <h4>Стоматологія</h4>
+            </div>
+            <div class="column">
+                <img src="https://lh3.googleusercontent.com/NKwetnt-3Zv6I06Do5GcXB9pd7JXGPatClqFR0Py240_yVzJxQJiOxrRR3K6zHqJ-Uzpjd7JarXpxsap0_f8UUm2QqEbBfvT9uM-kdqKwlmbSNrb_eyUI7VQbXtyitIDxAvc1D7c-g=w2400" alt="Ortho" style="width:100%">
+                <h4>Ортопедія</h4>
+            </div>
+            <div class="column">
+                <img src="https://lh3.googleusercontent.com/zoR04M3XX1YiUcuu--ipPAe1bX7NWARWmiqEK_x0IBb9rKWOKMtzNQ1aXHeWvjVyDvRlvwHsD8yxp8evwGxi0jnC6kH3tI6pXLZU29JJZTYIifSEbijmQwFOZiimOB0pULxcpoXohg=w2400" alt="Onko" style="width:100%">
+                <h4>Онкологія</h4>
+            </div>
+        </div>
+        <h3>
+            <a href="/Home/OurVets">Наші лікарі:</a>
+        </h3>
+        <div class="scrollmenu">
+            @foreach (var b in ViewBag.Vets)
+            {
+                <div class="col">
+                    <img src="@b.Img" alt="Opht" style="width: 300px; height: 300px; object-fit: cover; object-position: 50% 0;">
+                    <h4>@b.VetName</h4>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

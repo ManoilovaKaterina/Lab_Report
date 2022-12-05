@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutVet.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title> ViewAppointments </title>
+</head>
+<body>
+    <div>
+        <form asp-action="ViewAppointments" method="get">
+            <div class="form-actions no-color">
+                <p>
+                    Пошук за лікарем: <input type="text" name="Filter" value="@ViewData["CurrentFilter"]" />
+                    <input type="submit" value="Пошук" class="btn btn-default" />
+                    <a asp-action="ViewAppointments">Прибрати фільтр</a>
+                </p>
+                <p>
+                    @Html.ActionLink("Сортувати за часом", "ViewAppointments", new { sortOrder = ViewBag.DateSortParm })
+                </p>
+            </div>
+        </form>
+        <table>
+            <tr class="header">
+                <td> <p> Ім'я клієнта </p> </td>
+                <td> <p> Ім'я тварини </p> </td>
+                <td> <p> Ветеринар </p> </td>
+                <td> <p> Послуга </p> </td>
+                <td> <p> Час </p> </td>
+                <td>
+                </td>
+            </tr>
+            @foreach (var b in ViewBag.Appointments)
+            {
+                <tr>
+                    <td> <p> @b.ClName </p> </td>
+                    <td> <p> @b.AnName </p> </td>
+                    <td> <p> @b.VetName </p> </td>
+                    <td> <p> @b.ServName </p> </td>
+                    <td> <p> @b.Time </p> </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

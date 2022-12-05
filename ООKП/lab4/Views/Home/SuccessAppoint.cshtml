@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>SuccessAppoint</title>
+</head>
+<body>
+    <div>
+        <h3>@ViewBag.Appdata.ClName, вас було успішно записано на прийом</h3>
+        <table>
+            <tr class="header">
+                <td> <p> Ім'я тварини </p> </td>
+                <td> <p> Ветеринар </p> </td>
+                <td> <p> Послуга </p> </td>
+                <td> <p> Час </p> </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td> <p> @ViewBag.Appdata.AnName </p> </td>
+                <td> <p> @ViewBag.Appdata.VetName </p> </td>
+                <td> <p> @ViewBag.Appdata.ServName </p> </td>
+                <td> <p> @ViewBag.Appdata.Time </p> </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
