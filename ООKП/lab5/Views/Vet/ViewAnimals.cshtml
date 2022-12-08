@@ -1,0 +1,57 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutVet.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title> ViewAnimals </title>
+</head>
+<body>
+    <div>
+        <h3>Пацієнти</h3>
+        <form asp-action="ViewAnimals" method="get">
+            <div class="form-actions no-color">
+                <p>
+                    Пошук за видом тварини: <input list="kinds" name="Filter" value="@ViewData["CurrentFilter"]" />
+                    <datalist id="kinds">
+                        @foreach (var b in ViewBag.Animals)
+                        {
+                            <option value=@b.Kind class="text">@b.Kind</option>
+                        }
+                    </datalist>
+                    <input type="submit" value="Пошук" class="btn btn-default" />
+                    <a asp-action="ViewAnimals"></a>
+                </p>
+                <p>
+                    @Html.ActionLink("Сортувати за видом тварини", "ViewAnimals", new { sortOrder = ViewBag.NameSortParm })
+                </p>
+            </div>
+        </form>
+        <table>
+            <tr class="header">
+                <td> <p> Ім'я </p> </td>
+                <td> <p> Вид </p> </td>
+                <td> <p> Порода </p> </td>
+                <td> <p> Дата народження </p> </td>
+                <td> <p> Стать </p> </td>
+                <td> <p> Власник </p> </td>
+                <td>
+                </td>
+            </tr>
+            @foreach (var b in ViewBag.Animals)
+            {
+                <tr>
+                    <td> <p> @b.AnimalName </p> </td>
+                    <td> <p> @b.Kind </p> </td>
+                    <td> <p> @b.Breed </p> </td>
+                    <td> <p> @b.Birth </p> </td>
+                    <td> <p> @b.Gender </p> </td>
+                    <td> <p> @b.OwnerName </p> </td>
+                    <td> <p> <a href="/Vet/ViewDiagnosis?PatientId=@b.AnimalId">Додати діагноз</a></p> </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

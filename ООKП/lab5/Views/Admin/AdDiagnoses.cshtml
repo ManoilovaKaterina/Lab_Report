@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>AdDiagnoses</title>
+</head>
+<body>
+    <div>
+        <h3>Діагнози</h3>
+        <table>
+            <tr>
+                <td>
+                    @using (Html.BeginForm("AddDiagnosis", "Vet", FormMethod.Post))
+                    {
+                        <p> Введіть Id пацієнта </p>
+                        <input type="text" name="AnimalId" />
+                        <p> Введіть діагноз </p>
+                        <input type="text" name="Information" />
+                        <input type="submit" value="Підтвердити" />
+                    }
+                </td>
+            </tr>
+        </table>
+        <h2>Діагнози</h2>
+        <table>
+            <tr>
+                <td> <p> Id </p> </td>
+                <td> <p> Тварина </p> </td>
+                <td> <p> Інформація </p> </td>
+            </tr>
+        </table>
+        <table>
+            @foreach (var b in ViewBag.Diagnoses)
+            {
+                <tr>
+                    <td> <p> @b.DiagnosisId </p> </td>
+                    <td> <p> @b.AnimalId </p> </td>
+                    <td> <p> @b.Information </p> </td>
+                    <td>
+                        @using (Html.BeginForm("DeleteDiagnosis", "Vet", FormMethod.Post))
+                        {
+                            <input type="hidden" value="@b.DiagnosisId" name="Id" />
+                            <input type="submit" value="Видалити" />
+                        }
+                    </td>
+                    <td>
+                        @using (Html.BeginForm("UpdateDiagnosis", "Vet", FormMethod.Post))
+                        {
+                            <input type="hidden" value="@b.DiagnosisId" name="Id" />
+                            <p> Введіть нове значення </p>
+                            <input type="text" name="val" />
+                            <input type="submit" value="Підтвердити" />
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

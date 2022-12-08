@@ -1,0 +1,119 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>AdAnimals</title>
+</head>
+<body>
+    <div>
+        <h3>Тварини</h3>
+        <table>
+            <tr>
+                @using (Html.BeginForm("AddAnimal", "Admin", FormMethod.Post))
+                {
+                    <td>
+                        <p> Введіть ім'я тварини </p>
+                        <input type="text" name="name" />
+                    </td>
+                    <td>
+                        <p> Введіть вид тварини </p>
+                        <input type="text" name="kind" />
+                    </td>
+                    <td>
+                        <p> Введіть породу тварини </p>
+                        <input type="text" name="breed" />
+                    </td>
+                    <td>
+                        <p> Введіть дату народження тварини </p>
+                        <input type="text" name="birth" />
+                    </td>
+                    <td>
+                        <p> Введіть стать тварини </p>
+                        <input type="text" name="gen" />
+                    </td>
+                    <td>
+                        <p> Введіть ім'я власника тварини </p>
+                        <input type="text" name="own" />
+                    </td>
+                    <td>
+                        <input type="submit" value="Підтвердити" />
+                    </td>
+                }
+            </tr>
+            <tr>
+                @using (Html.BeginForm("UpdateAnimal", "Admin", FormMethod.Post))
+                {
+                    <td>
+                        <p> Введіть індекс тварини для оновлення </p>
+                        <input type="text" name="Id" />
+                    </td>
+                    <td>
+                        <p> Оновити ім'я тварини </p>
+                        <input type="text" name="newName" />
+                    </td>
+                    <td>
+                        <p> Оновити вид тварини </p>
+                        <input type="text" name="newKind" />
+                    </td>
+                    <td>
+                        <p> Оновити породу тварини </p>
+                        <input type="text" name="newBreed" />
+                    </td>
+                    <td>
+                        <p> Оновити дату народження тварини </p>
+                        <input type="text" name="newBirth" />
+                    </td>
+                    <td>
+                        <p> Оновити стать тварини </p>
+                        <input type="text" name="newGen" />
+                    </td>
+                    <td>
+                        <p> Оновити ім'я власника тварини </p>
+                        <input type="text" name="newOwn" />
+                    </td>
+                    <td>
+                        <input type="submit" value="Підтвердити" />
+                    </td>
+
+                }
+            </tr>
+            </table>
+        <h2>Тварини</h2>
+        <table>
+            <tr>
+                <td> <p> Id </p> </td>
+                <td> <p> Ім'я </p> </td>
+                <td> <p> Вид </p> </td>
+                <td> <p> Порода </p> </td>
+                <td> <p> Дата народження </p> </td>
+                <td> <p> Стать </p> </td>
+                <td> <p> Власник </p> </td>
+            </tr>
+        </table>
+        <table>
+            @foreach (var b in ViewBag.Animals)
+            {
+                <tr>
+                    <td> <p> @b.AnimalId </p> </td>
+                    <td> <p> @b.AnimalName </p> </td>
+                    <td> <p> @b.Kind </p> </td>
+                    <td> <p> @b.Breed </p> </td>
+                    <td> <p> @b.Birth </p> </td>
+                    <td> <p> @b.Gender </p> </td>
+                    <td> <p> @b.OwnerName </p> </td>
+                    @using (Html.BeginForm("DeleteAnimal", "Admin", FormMethod.Post))
+                    {
+                        <td>
+                            <input type="hidden" value="@b.AnimalId" name="Id" />
+                            <input type="submit" value="Видалити" />
+                        </td>
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>SuccessAppoint</title>
+</head>
+<body>
+    <div>
+        <h3 style="text-align: center;">@ViewBag.Appdata.ClName, вас було успішно записано на прийом</h3>
+        <table style="margin-left: auto; margin-right: auto; background-color: #8bcab9; border-radius: 5px; ">
+            <tr class="header">
+                <td> <p> Ім'я тварини </p> </td>
+                <td> <p> Ветеринар </p> </td>
+                <td> <p> Послуга </p> </td>
+                <td> <p> Час </p> </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td> <p> @ViewBag.Appdata.AnName </p> </td>
+                <td> <p> @ViewBag.Appdata.VetName </p> </td>
+                <td> <p> @ViewBag.Appdata.ServName </p> </td>
+                <td> <p> @ViewBag.Appdata.Time </p> </td>
+            </tr>
+        </table>
+        @if (TempData["InInf"] != null)
+        {
+            <h3>@TempData["InInf"]</h3>
+        <table>
+            <tr>
+                @using (Html.BeginForm("UpNewAnimal", "Home", FormMethod.Post))
+                {
+                    <td>
+                        <input type="hidden" value="@ViewBag.Appdata.AnName" name="Name" />
+                        <input type="hidden" value="@ViewBag.Appdata.ClName" name="OwnName" />
+                        <p> Вид тварини: </p>
+                        <input list="kind" name="newKind" />
+                        <datalist id="kind">
+                            <option value="Собака" class="text">Собака</option>
+                            <option value="Кіт" class="text">Кіт</option>
+                            <option value="Хом'як" class="text">Хом'як</option>
+                            <option value="Кролик" class="text">Кролик</option>
+                            <option value="Шиншила" class="text">Шиншила</option>
+                            <option value="Черепаха" class="text">Черепаха</option>
+                        </datalist>
+                    </td>
+                    <td>
+                        <p> Порода тварини: </p>
+                        <input type="text" name="newBreed" />
+                    </td>
+                    <td>
+                        <p> Дата народження тварини: </p>
+                        <input type="datetime-local" name="Date">
+                    </td>
+                    <td>
+                        <p> Стать тварини: </p>
+                        <input list="gen" name="newGen" />
+                        <datalist id="gen">
+                            <option value="Жіноча" class="text">Жіноча</option>
+                            <option value="Чоловіча" class="text">Чоловіча</option>
+                        </datalist>
+                    </td>
+                }
+            </tr>
+            <tr><td><input type="submit" value="Підтвердити" /></td></tr>
+        </table>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutVet.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title> ViewAppointments </title>
+</head>
+<body>
+    <div>
+        <form asp-action="ViewAppointments" method="get">
+            <div class="form-actions no-color">
+                <p>
+                    Пошук за лікарем:
+                    <input list="vets" name="Filter" value="@ViewData["VetFilter"]" />
+                    <datalist id="vets">
+                        @foreach (var b in ViewBag.Vets)
+                        {
+                            <option value=@b.VetName class="text">@b.VetName</option>
+                        }
+                    </datalist>
+                    <input type="submit" value="Пошук" class="btn btn-default" />
+                    <a asp-action="ViewAppointments"></a>
+                
+                    Фільтр за станом:
+                    <input list="state" name="SFilter" value="@ViewData["StateFilter"]" />
+                    <datalist id="state">
+                        <option value="Активний" class="text">Активний</option>
+                        <option value="Завершений" class="text">Завершений</option>
+                        <option value="Скасований" class="text">Скасований</option>
+                    </datalist>
+                    <input type="submit" value="Пошук" class="btn btn-default" />
+                    <a asp-action="ViewAppointments"></a>
+                </p>
+                <p>
+                    @Html.ActionLink("Сортувати за часом", "ViewAppointments", new { sortOrder = ViewBag.DateSortParm })
+                </p>
+            </div>
+        </form>
+        <table>
+            <tr class="header">
+                <td> <p> Ім'я клієнта </p> </td>
+                <td> <p> Ім'я тварини </p> </td>
+                <td> <p> Ветеринар </p> </td>
+                <td> <p> Послуга </p> </td>
+                <td> <p> Час </p> </td>
+                <td> <p> Стан </p> </td>
+                <td>
+                </td>
+            </tr>
+            @foreach (var b in ViewBag.Appointments)
+            {
+                <tr>
+                    <td> <p> @b.ClName </p> </td>
+                    <td> <p> @b.AnName </p> </td>
+                    <td> <p> @b.VetName </p> </td>
+                    <td> <p> @b.ServName </p> </td>
+                    <td> <p> @b.Time </p> </td>
+                    <td> <p> @b.State </p> </td>
+                    @using (Html.BeginForm("UpdateState", "Vet", FormMethod.Post))
+                    {
+                        <td>
+                            <input type="hidden" value="@b.Id" name="Id" />
+                            <p> Оновити: </p>
+                        </td>
+                        <td>
+                            <input list="newstate" name="val"/>
+                            <datalist id="newstate">
+                                <option value="Активний" class="text">Активний</option>
+                                <option value="Завершений" class="text">Завершений</option>
+                                <option value="Скасований" class="text">Скасований</option>
+                            </datalist>
+                        </td>
+                        <td>
+                            <input type="submit" value="Підтвердити" />
+                        </td>
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
