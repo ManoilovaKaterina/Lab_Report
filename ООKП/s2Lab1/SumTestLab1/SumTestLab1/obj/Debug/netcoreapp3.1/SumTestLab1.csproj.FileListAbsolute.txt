@@ -1,0 +1,14 @@
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\bin\Debug\netcoreapp3.1\SumTestLab1.exe
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\bin\Debug\netcoreapp3.1\SumTestLab1.deps.json
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\bin\Debug\netcoreapp3.1\SumTestLab1.runtimeconfig.json
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\bin\Debug\netcoreapp3.1\SumTestLab1.runtimeconfig.dev.json
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\bin\Debug\netcoreapp3.1\SumTestLab1.dll
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\bin\Debug\netcoreapp3.1\SumTestLab1.pdb
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\obj\Debug\netcoreapp3.1\SumTestLab1.csproj.AssemblyReference.cache
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\obj\Debug\netcoreapp3.1\SumTestLab1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\obj\Debug\netcoreapp3.1\SumTestLab1.AssemblyInfoInputs.cache
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\obj\Debug\netcoreapp3.1\SumTestLab1.AssemblyInfo.cs
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\obj\Debug\netcoreapp3.1\SumTestLab1.csproj.CoreCompileInputs.cache
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\obj\Debug\netcoreapp3.1\SumTestLab1.dll
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\obj\Debug\netcoreapp3.1\SumTestLab1.pdb
+C:\Users\undor\source\repos\SumTestLab1\SumTestLab1\obj\Debug\netcoreapp3.1\SumTestLab1.genruntimeconfig.cache
