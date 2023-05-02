@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div>
+        <h3>Задача</h3>
+        @Html.Label("", ViewData["Question"].ToString())
+        <p>Оскільки деякі умови суперечливі, застосовувати їх логіку треба по пріорітету відносно черги людини.</p>
+        <form method="post" action="">
+            <table>
+                <tr>
+                    <td><p></p></td>
+                    <td><p>Ім'я</p></td>
+                    <td><p>Посада</p></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Перша людина:</td>
+                    <td>
+                        <input list="name" name="n1" />
+                        <datalist id="name">
+                            <option value="Лев" class="text">Лев</option>
+                            <option value="Михайло" class="text">Михайло</option>
+                            <option value="Роман" class="text">Роман</option>
+                        </datalist>
+                    </td>
+                    <td>
+                        <input list="pos" name="p1" />
+                        <datalist id="pos">
+                            <option value="Бухгалтер" class="text">Бухгалтер</option>
+                            <option value="Касир" class="text">Касир</option>
+                            <option value="Начальник відділу" class="text">Начальник відділу</option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Друга людина:</td>
+                    <td>
+                        <input list="name" name="n2" />
+                        <datalist id="name">
+                            <option value="Лев" class="text">Лев</option>
+                            <option value="Михайло" class="text">Михайло</option>
+                            <option value="Роман" class="text">Роман</option>
+                        </datalist>
+                    </td>
+                    <td>
+                        <input list="pos" name="p2" />
+                        <datalist id="pos">
+                            <option value="Бухгалтер" class="text">Бухгалтер</option>
+                            <option value="Касир" class="text">Касир</option>
+                            <option value="Начальник відділу" class="text">Начальник відділу</option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Третя людина:</td>
+                    <td>
+                        <input list="name" name="n3" />
+                        <datalist id="name">
+                            <option value="Лев" class="text">Лев</option>
+                            <option value="Михайло" class="text">Михайло</option>
+                            <option value="Роман" class="text">Роман</option>
+                        </datalist>
+                    </td>
+                    <td>
+                        <input list="pos" name="p3" />
+                        <datalist id="pos">
+                            <option value="Бухгалтер" class="text">Бухгалтер</option>
+                            <option value="Касир" class="text">Касир</option>
+                            <option value="Начальник відділу" class="text">Начальник відділу</option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Перевірити" /></td>
+                </tr>
+            </table>
+        </form>
+        @Html.Label("", ViewData["Result"].ToString())
+    </div>
+</div>
